@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES Image Encryption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AES Image Encryption</h1>
+
+        <form id="formData">
+            <div class="form-group">
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label for="key">Encryption Key (16, 24, or 32 characters):</label>
+                <input type="text" id="key" name="key" placeholder="Enter AES Key" maxlength="32" required>
+            </div>
+
+            <div class="button-group">
+                <button type="button" id="encrypt-btn">Encrypt Image</button>
+                <button type="button" id="decrypt-btn">Decrypt Image</button>
+            </div>
+        </form>
+
+        <div class="result">
+            <h2>Result:</h2>
+            <p id="output-message"></p>
+            <!-- Output Image -->
+<img id="output-image" style="display: none; width: 300px; height: auto; border: 1px solid black;" alt="Encrypted Image">
+
+<!-- Download Button -->
+<button id="download-btn" style="display: none;">Download Image</button>
+
+            <!-- <img id="output-image" src="" alt="Output Image" style="display:none;">
+            <button id="download-btn" style="display:none;">Download Image</button> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
